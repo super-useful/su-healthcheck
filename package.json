@@ -1,0 +1,36 @@
+{
+    "name" : "su-healthcheck",
+    "version" : "0.0.1",
+    "description" : "super useful API health check plug-in for su-apiserver",
+    "dependencies" : {
+        "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0"
+    },
+    "devDependencies" : {
+        "chai" : "1.9.x",
+        "mocha" : "1.21.x",
+        "rewire" : "2.1.x",
+        "sinon" : "1.10.x",
+        "sinon-chai" : "2.5.x"
+    },
+    "author" : {
+        "Simon Jefford" : "si@ibrokethat.com",
+        "Christos Constandinou" : "constantology@gmail.com"
+    },
+    "license" : [
+        {
+            "type" : "MIT",
+            "url" : "https://raw.github.com/super-useful/su-healthcheck/master/LICENSE"
+        }
+    ],
+    "repository" : {
+        "type" : "git",
+        "url" : "git@github.com:super-useful/su-healthcheck.git"
+    },
+    "scripts" : {
+        "test" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui tdd ./test/**/*.test.js",
+        "test-jenkins" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui tdd ./test/**/*.test.js > test-reports.xml"
+    },
+    "engines" : {
+        "node" : "0.11.x"
+    }
+}
