@@ -3,7 +3,14 @@
     "version" : "0.0.1",
     "description" : "super useful API health check plug-in for su-apiserver",
     "dependencies" : {
-        "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0"
+        "co" : "3.1.x",
+        "co-mongo" : "x",
+        "co-pg" : "1.2.x",
+        "co-read" : "0.1.x",
+        "co-write" : "0.3.x",
+        "pg" : "3.4.x",
+        "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0",
+        "thunkify" : "2.1.x"
     },
     "devDependencies" : {
         "chai" : "1.9.x",
