@@ -12,7 +12,7 @@ co(function* () {
     var res = {
         available_diskspace : HC.df(),
         free_memory : HC.memory(),
-        node : HC.version,
+        node : HC.version(),
         redis : yield HC.redis('127.0.0.1', 6379),
         mongo : yield HC.mongo('127.0.0.1', 27017, 'crunchgoat'),
         postgres : yield HC.postgres('127.0.0.1', 5432, 'ubuntu', 'ubuntu', 'me'),
