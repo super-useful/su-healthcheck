@@ -1,6 +1,7 @@
 {
     "name" : "su-healthcheck",
     "version" : "0.0.1",
+    "main": "index.js",
     "description" : "super useful API health check plug-in for su-apiserver",
     "dependencies" : {
         "co" : "3.1.x",
