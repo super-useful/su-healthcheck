@@ -25,8 +25,14 @@ co(function* () {
 })();
 ```
 
-Run with
+### Run the example
 
 ```
 $ node --nolazy --harmony --harmony_typeof example.js
+```
+
+### Tests
+
+```
+$ npm test
 ```
