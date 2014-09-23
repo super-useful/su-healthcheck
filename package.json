@@ -18,7 +18,8 @@
         "mocha" : "1.21.x",
         "rewire" : "2.1.x",
         "sinon" : "1.10.x",
-        "sinon-chai" : "2.5.x"
+        "sinon-chai" : "2.5.x",
+        "mockuire": "0.1.0"
     },
     "author" : {
         "Simon Jefford" : "si@ibrokethat.com",
@@ -35,8 +36,7 @@
         "url" : "git@github.com:super-useful/su-healthcheck.git"
     },
     "scripts" : {
-        "test" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui tdd ./test/**/*.test.js",
-        "test-jenkins" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui tdd ./test/**/*.test.js > test-reports.xml"
+        "test" : "mocha --harmony --harmony_typeof --recursive -R spec --ui tdd ./test/*-test.js"
     },
     "engines" : {
         "node" : "0.11.x"

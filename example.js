@@ -1,4 +1,4 @@
-var HC = require('su-healthcheck');
+var HC = require('./index');
 var co = require('co');
 
 co(function* () {
@@ -8,10 +8,10 @@ co(function* () {
         available_diskspace : HC.df(),
         free_memory : HC.memory(),
         node : HC.version(),
-        redis : yield HC.redis('127.0.0.1', 6379),
-        mongo : yield HC.mongo('127.0.0.1', 27017, 'crunchgoat'),
-        postgres : yield HC.postgres('127.0.0.1', 5432, 'ubuntu', 'ubuntu', 'me'),
-        sshTunnel : HC.sshTunnel('54.195.60.13', 5432, '127.0.0.1', 5432, 'ubuntu')
+        redis : yield HC.redis(),
+        mongo : yield HC.mongo({db: 'crunchgoat'}),
+        postgres : yield HC.postgres({user: 'ubuntu', db: 'ubuntu', schema: 'me'}),
+        sshTunnel : HC.sshTunnel({host: '54.195.60.13', hostPort: 5432, bindHost: '127.0.0.1', bindPort: 5432, user: 'ubuntu'})
     };
 
     console.log(res);
