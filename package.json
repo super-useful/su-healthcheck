@@ -10,6 +10,7 @@
         "co-read" : "0.1.x",
         "co-write" : "0.3.x",
         "pg" : "3.4.x",
+        "ping": "0.1.x",
         "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0",
         "thunkify" : "2.1.x"
     },
