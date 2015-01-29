@@ -6,6 +6,7 @@ module.exports = {
     postgres : require('./lib/postgres'),
     sshTunnel : require('./lib/ssh_tunnel'),
     verify : require('./lib/verify'),
+    host: require('./lib/host'),
     version : function() {
         return process.version;
     }
