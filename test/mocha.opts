@@ -1,5 +1,4 @@
 --harmony
---harmony_typeof
 --recursive
 -R spec
 --ui tdd
